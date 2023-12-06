@@ -5,7 +5,43 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+<style>
+    table, thead, tbody, th, td{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
 <body>
+    <div id="container">
+        <h1>All blog entries</h1>
+        
+        <nav id="main-nav">
+            <a href="create-pun.html">Create new blog entry</a>
+        </nav>
+
+        <table id="blog-table">
+            <thead>
+                <th>Titel</th>
+                <th>Författare</th>
+                <th>Taggar</th>
+                <th>Datum</th>
+                <th>Hantera</th>
+            </thead>
+            <tbody id="table-body">
+                <!-- <td>testar</td>
+                <td>John doe</td>
+                <td>
+                    <li>tag1</li>
+                    <li>tag2</li>
+                    <li>tag3</li>
+                </td>
+                <td>2023-12-06</td>
+                <td><a href="#">Update</a> |
+                    <a href="#">Delete</a> </td> -->
+            </tbody>
+        </table>
+
+    </div>
     <script src="js/manage-posts.js"></script>
 </body>
 </html>
