@@ -12,14 +12,10 @@ async function fetchBlogData(){
             let blogContent=blogPosts.content
             let blogTags=blogPosts.tags
             // console.log(blogTags)
-            if(blogContent.length>200){
-                blogContent = blogContent.slice(0, 200) + "...";
-                document.getElementById('content').textContent = blogContent;
-            }
             if(blogTags!==null){
-                mainUl.innerHTML+=`<p>Tags: ${blogTags.join(', ')}</p>` 
+                blogTags=blogTags.join(', ')
             }else{
-                mainUl.innerHTML+=`<p>Tags:</p>`
+                blogTags.remove()
             }
             mainUl.innerHTML+=`
                 <li>
@@ -30,6 +26,7 @@ async function fetchBlogData(){
                     </p>
                     <p id="content">${blogContent}</p>
                     <a href="posts.html" style="color: red;">Read more</a>
+                    <p>Tags: ${blogTags}</p>
                 </li>
             `
         }
