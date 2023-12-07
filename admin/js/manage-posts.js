@@ -27,7 +27,7 @@ async function fetchBlogs() {
                     ${tagsHTML}
                 </td>
                 <td><span class="date">- ${blogDate.getFullYear()}-${blogDate.getMonth()+1}-${blogDate.getDate()} ${blogDate.toLocaleTimeString()}</span></td>
-                <td><a href="#">Update</a> |
+                <td><a href="update-post.html">Update</a> |
                     <a href="#">Delete</a> </td>
             </tr>
             `
