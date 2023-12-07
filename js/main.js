@@ -23,12 +23,12 @@ async function fetchBlogData(){
                 <li>
                     <h2>${blogPosts.title}</h2>
                     <h3 style="display: inline;">Author: </h3>${blogPosts.author}
-                    <p>
+                    <p class="snd-text-font">
                         ${blogDate.getFullYear()}-${blogDate.getMonth()+1}-${blogDate.getDate()} ${blogDate.toLocaleTimeString([], {timeStyle: 'short'})}
                     </p>
                     <p id="content">${blogContent}</p>
                     <a href="posts.html">Read more</a>
-                    <p>Tags: ${blogTags}</p>
+                    <p class="snd-text-font">Tags: ${blogTags}</p>
                 </li>
             `
         }
