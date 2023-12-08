@@ -18,7 +18,7 @@ async function fetchBlogs() {
                     tagsHTML += `<li>${tag}</li>`
                 }
             }
-            // Det är här vi skapar och sätter upp hur våran html ska se ut. vi sätter upp hur våran tabell ska se ut och sätter in datan från APiet
+            // Det är här vi skapar och sätter upp hur våran html ska se ut. vi sätter upp hur våran tabell ska se ut och sätter in datan från APiet, taggarna sätts in från våran samlade tagg variabel.
             blogListHTML += `
             <tr>
                 <td>${entry.title}</td>
@@ -28,7 +28,7 @@ async function fetchBlogs() {
                 </td>
                 <td><span class="date">- ${blogDate.getFullYear()}-${blogDate.getMonth()+1}-${blogDate.getDate()} ${blogDate.toLocaleTimeString()}</span></td>
                 <td><a href="update-post.html">Update</a> |
-                    <a href="#">Delete</a> </td>
+                    <a href="#" data-id=${entry._id} class="delete-blog">Delete</a> </td>
             </tr>
             `
         }
@@ -36,5 +36,19 @@ async function fetchBlogs() {
         document.getElementById('table-body').innerHTML = blogListHTML;
     } catch(error) {
         console.log(error)
-    }  
+    }
+    // Liknande hur vi gjorde i pun uppgiften så vill vi här lägga in våran deleteknapp också. Våran variabel fångar upp alla knappar genom deras tilldelade klass
+    let deleteLinks = document.getElementsByClassName('delete-blog');
+    // for loopen tilldelar sedan en eventlistener till alla våra delete knappar som plockar upp tillhörande bloggens id, skickar en DELETE request till APIet och sedan tar bort blogginlägget från våran vy.
+    for (let link of deleteLinks) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            let blog = e.target.dataset.id;
+            fetch (`https://blog-api-assignment.up.railway.app/posts/${blog}`, {
+                method: 'DELETE'
+            });
+            link.parentNode.parentNode.remove();
+        })
+    }
+
 }
