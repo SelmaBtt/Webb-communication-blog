@@ -11,27 +11,32 @@
         flex-direction: column;
         /* width: 50vw; */
     }
-    label, input, textarea{
-        margin: 5px;
+    form *{
         align-self: center;
         width: 40vw;
     }
-    label, input{
+    input{
+        margin: 5px;
         height: 2em;
     }
-    a{
-        margin: 5px 50%;
+    #submit-btn{
+        margin-top: 1em;
     }
 </style>
 <body>
     <!-- <h1>This page is required for the VG grade</h1> -->
 
+    <label for="form">Update</label>
     <form>
-        <label for="">Update</label>
+        <label for="title">Title:</label>
         <input id="title" type="text">
+        <label for="author">Author:</label>
         <input id="author" type="text">
-        <input id="date" type="text">
+        <label for="date">Date:</label>
+        <input id="date" type="text" disabled>
+        <label for="content">Content:</label>
         <textarea name="content" id="post-content" cols="30" rows="10"></textarea>
+        <label for="tags">Tags:</label>
         <input id="tags" type="text">
         <input id="submit-btn" type="submit" value="Update">
     </form>

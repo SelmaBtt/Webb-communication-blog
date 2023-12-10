@@ -5,6 +5,7 @@ async function fetchBlogs() {
         // Sätta upp kontakt med vårat API och hämta datan. Då dessa variabler inte ska ändras kan vi använda const
         const response = await fetch('https://blog-api-assignment.up.railway.app/posts');
         const blogs = await response.json();
+        console.log(blogs)
         // blogListHTML kommer vi fylla med våran HTML data i våran for loop, sedan sätta in i tabellen vi har i html
         let blogListHTML = "";
         // For loop för att gå igenom alla bloginlägg och lägga till datan i våran blogListHTML variabel
@@ -27,7 +28,7 @@ async function fetchBlogs() {
                     ${tagsHTML}
                 </td>
                 <td><span class="date">- ${blogDate.getFullYear()}-${blogDate.getMonth()+1}-${blogDate.getDate()} ${blogDate.toLocaleTimeString()}</span></td>
-                <td><a href="update-post.html">Update</a> |
+                <td><a href="update-post.html?id=${entry._id}">Update</a> |
                     <a href="#">Delete</a> </td>
             </tr>
             `
