@@ -4,15 +4,16 @@ async function createBlog(e) {
     e.preventDefault();
 
     let form = e.target;
-
     try {
         // data = serializeForm(form);
         let formData = new FormData(form)
         console.log(formData)
+        console.log(formData.getAll('blog-tag'))
         data = {
             "title": formData.get('blog-title'),
             "content": formData.get('blog-text'),
-            "author": formData.get('blog-author')
+            "author": formData.get('blog-author'),
+            "tags": formData.getAll('blog-tag')
         };
         console.log(data)
     
@@ -30,6 +31,8 @@ async function createBlog(e) {
     } 
     
 }
+
+$('select[multiple]').multiselect()
 
 // let serializeForm = function (form) {
 //     var obj = {};
