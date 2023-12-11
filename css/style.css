@@ -3,7 +3,6 @@
     box-sizing: border-box;
     font-family: var(--main-font);
 }
-
 body{
     margin: 0;
     background-color: var(--background);
