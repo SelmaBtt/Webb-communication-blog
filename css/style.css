@@ -3,20 +3,19 @@
     box-sizing: border-box;
     font-family: var(--main-font);
 }
-
 body{
     margin: 0;
     background-color: var(--background);
 }
+
 header{
-    display: flex;
+    /* displ'ay: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: row; */
     background-color: var(--blue);
     padding: 50px 10%;
 }
 #admin-link{
-    text-decoration: none;
     font-size: 20px;
 }
 #main-content{
@@ -27,6 +26,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
 }
 li{
     margin: 50px 1%;
@@ -36,6 +36,7 @@ li{
     box-shadow: 5px 5px 5px var(--accent-shade);
     list-style-type: none;
     overflow: auto;
+    padding: 10px;
 }
 li::-webkit-scrollbar {
     height: 0px;
@@ -43,12 +44,22 @@ li::-webkit-scrollbar {
 li *{
     margin: 5px 0;
 }
-h2 {
+h2, h3 {
     font-family: var(--extra-font);
 }
 h3, #author {
     display: inline ;
 }
-/* .snd-text-font{
-
-} */
+button{
+    background-color: var(--blue);
+    border-radius: 7px;
+    border: none;
+}
+li a{
+    text-decoration: none;
+    color: black;
+}
+button:hover{
+    transition: .3s ease;
+    box-shadow: 2px 2px 2px var(--accent-shade);
+}
