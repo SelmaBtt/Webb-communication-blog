@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Tulpen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&family=Poppins&family=Tulpen+One&display=swap');
 :root{
     --background: #EDE7D7;
     --blue: #B8C9EE;
     --white: #F4F4F4;
     --accent-shade: #2a1d06;
+    --main-font: Poppins;
+    --extra-font: Nunito;
 }
