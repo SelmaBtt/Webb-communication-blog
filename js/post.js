@@ -11,9 +11,11 @@ async function fetchBlog() {
         let blogDate = new Date(blogData.date)
 
         document.getElementById('title').innerHTML = blogData.title
-        
+        document.getElementById('author').innerHTML = blogData.author
         document.getElementById('info').innerHTML = blogData.content
+        document.getElementById('tags').innerHTML = blogData.tags.join(', ')
         document.getElementById('date').innerText = `${blogDate.getFullYear()}-${blogDate.getMonth()+1}-${blogDate.getDate()} ${blogDate.toLocaleTimeString([], {timeStyle: 'short'})}`
+        
 
     } catch(error) {
         console.log(error)
