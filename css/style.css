@@ -1,6 +1,10 @@
+* {
+    box-sizing: border-box;
+}
 body{
     margin: 0;
     background-color: #ede7d7;
+
 }
 header{
     display: flex;
@@ -30,6 +34,10 @@ li{
     border-radius: 15px;
     box-shadow: 5px 5px 5px #4f0f0f;
     list-style-type: none;
+    overflow: auto;
+}
+li::-webkit-scrollbar {
+    height: 0px;
 }
 li *{
     margin: 5px 0;
