@@ -14,7 +14,7 @@ async function fetchBlogData(){
             console.log(blogTags)
             if(blogContent.length>200){
                 blogContent = blogContent.slice(0, 200) + "..."; 
-                document.getElementById('content').textContent = blogContent;
+                // document.getElementById('content').textContent = blogContent;
             }
             if(blogTags!==null){
                 blogTags=blogTags.join(', ')
@@ -27,7 +27,7 @@ async function fetchBlogData(){
                         ${blogDate.getFullYear()}-${blogDate.getMonth()+1}-${blogDate.getDate()} ${blogDate.toLocaleTimeString([], {timeStyle: 'short'})}
                     </p>
                     <p id="content">${blogContent}</p>
-                    <a href="posts.html">Read more</a>
+                    <a href="post.html?id=${blogPosts._id}">Read more</a>
                     <p class="snd-text-font">Tags: ${blogTags}</p>
                 </li>
             `
