@@ -37,6 +37,9 @@ li{
     list-style-type: none;
     overflow: auto;
 }
+li::-webkit-scrollbar {
+    height: 0px;
+}
 li *{
     margin: 5px 0;
 }
