@@ -2,11 +2,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Update Page</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+<style>
+    form{
+        display: flex;
+        flex-direction: column;
+        /* width: 50vw; */
+    }
+    form *{
+        align-self: center;
+        width: 40vw;
+    }
+    input{
+        margin: 5px;
+        height: 2em;
+    }
+    #submit-btn{
+        margin-top: 1em;
+    }
+</style>
 <body>
-    <h1>This page is required for the VG grade</h1>
+    <!-- <h1>This page is required for the VG grade</h1> -->
+
+    <label for="form">Update</label>
+    <form>
+        <label for="title">Title:</label>
+        <input id="title" type="text">
+        <label for="author">Author:</label>
+        <input id="author" type="text">
+        <label for="date">Date:</label>
+        <input id="date" type="text" disabled>
+        <label for="content">Content:</label>
+        <textarea name="content" id="post-content" cols="30" rows="10"></textarea>
+        <label for="tags">Tags:</label>
+        <select name="blog-tag" id="blog-tag" multiple="multiple">
+            <option value="Lifestyle">Lifestyle</option>
+            <option value="Food">Food</option>  
+            <option value="Gaming">Gaming</option>
+            <option value="Travel">Travel</option>
+            <option value="Philosophy">Philosophy</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Science">Science</option>
+            <option value="People">People</option>
+            <option value="Politics">Politics</option>
+            <option value="Family">Family</option>
+        </select>
+        <input id="submit-btn" type="submit" value="Update">
+    </form>
+    <a href="index.html">Back</a>
+
 
     <script src="js/update-post.js"></script>
 </body>

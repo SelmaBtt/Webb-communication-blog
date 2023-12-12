@@ -10,6 +10,7 @@ async function fetchBlogData(){
         for(let blogPosts of data){
             let blogDate=new Date(blogPosts.date)
             let blogContent=blogPosts.content
+            console.log(blogContent)
             let blogTags=blogPosts.tags
             console.log(blogTags)
             if(blogContent.length>200){
