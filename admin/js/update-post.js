@@ -41,7 +41,7 @@ async function fetchAPI(){
         title.value=postData.title
         author.value=postData.author
         date.value=postData.date
-        content.value=postData.content //(if property is null, find a solution that works for every input)
+        content.value=postData.content
         tags.value=postData.tags.join(', ')
     }catch(error){
         let errorDiv=document.createElement('div')
