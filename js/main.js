@@ -28,7 +28,7 @@ async function fetchBlogData(){
                         ${blogDate.getFullYear()}-${blogDate.getMonth()+1}-${blogDate.getDate()} ${blogDate.toLocaleTimeString([], {timeStyle: 'short'})}
                     </p>
                     <p id="content">${blogContent}</p>
-                    <a href="posts.html">Read more</a>
+                    <button><a href="post.html?id=${blogPosts._id}">Read more</a></button>
                     <p class="snd-text-font">Tags: ${blogTags}</p>
                 </li>
             `

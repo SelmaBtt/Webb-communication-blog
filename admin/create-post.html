@@ -4,10 +4,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/css/bootstrap-multiselect.css" />
 </head>
 <body>
     <h1>This page is required for the VG grade</h1>
 
+    <form id="blog-form">
+        <input type="text" name="blog-title" placeholder="Title">
+        <input type="text" name="blog-author" placeholder="Author">
+        <textarea name="blog-text" id="blog-text" cols="30" rows="10" placeholder="Your blog"></textarea>
+        <select name="blog-tag" id="blog-tag" multiple="multiple">
+            <option value="Lifestyle">Lifestyle</option>
+            <option value="Food">Food</option>  
+            <option value="Gaming">Gaming</option>
+            <option value="Travel">Travel</option>
+            <option value="Philosophy">Philosophy</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Science">Science</option>
+            <option value="People">People</option>
+            <option value="Politics">Politics</option>
+            <option value="Family">Family</option>
+        </select>
+        <button name="blog-send" id="blog-button">Create</button>
+        <nav id="main-nav">
+            <a href="index.html">Back to admin view</a>
+        </nav>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/js/bootstrap-multiselect.min.js"></script>
     <script src="js/create-post.js"></script>
 </body>
 </html>
