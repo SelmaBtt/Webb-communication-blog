@@ -1,1 +1,63 @@
-@import url(variables.css);
+@import url(../../css/variables.css);
+
+*{
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+body{
+    margin: 0;
+    background-color: var(--background);
+    margin: auto;
+    max-width: 50%;
+}
+h1{
+    background-color: var(--blue);
+    padding: 50px 10%;
+}
+table, thead, tbody, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#container, #blog-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#blog-table {
+    background-color: var(--white);
+}
+
+#main-nav {
+    display: flex;
+    justify-content: space-between;
+}
+td {
+    padding: 5px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+#admin-link{
+    font-size: 20px;
+}
+#main-content{
+    margin: 30px 0;
+}
+#main-ul{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+button{
+    background-color: var(--blue);
+    border-radius: 7px;
+    border: none;
+}
+button:hover{
+    transition: .3s ease;
+    box-shadow: 2px 2px 2px var(--accent-shade);
+}

@@ -22,15 +22,15 @@ async function fetchBlogs() {
             // Det är här vi skapar och sätter upp hur våran html ska se ut. vi sätter upp hur våran tabell ska se ut och sätter in datan från APiet, taggarna sätts in från våran samlade tagg variabel.
             blogListHTML += `
             <tr>
-                <td>${entry.title}</td>
-                <td>${entry.author}</td>
-                <td>
+                <td class="titles">${entry.title}</td>
+                <td class="authors">${entry.author}</td>
+                <td class="tags">
                     ${tagsHTML}
                 </td>
                 
                 <td><span class="date"> ${blogDate.getFullYear()}-${blogDate.getMonth()+1}-${blogDate.getDate()} ${blogDate.toLocaleTimeString()} </span></td>
-                <td><a href="update-post.html">Update</a> |
-                    <a href="#" data-id=${entry._id} class="delete-blog">Delete</a> </td>
+                <td class="buttons"><button><a href="update-post.html">Update</a></button> |
+                    <button><a href="#" data-id=${entry._id} class="delete-blog">Delete</a></button> </td>
             </tr>
             `
         }
