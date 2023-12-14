@@ -1,0 +1,10 @@
+Bloghemsida skapad utav Dirk & Selma
+
+Ansarsområde 1 hanterades av Dirk
+Ansarsområde 2 hanterades av Selma
+
+post.html programmerade vi tillsammans på skolan, Dirk laddade sedan upp Javascript och html koden.
+
+Styling kom vi överens över i skolan men har sedan implementerat den i våra separata delar själva.
+Vi gjorde en separat css sida för variabler som vi båda sedan kunde använda så att färger och fonts är likadana överallt
+Selma gjorde det mesta utav stylingen för post.html
