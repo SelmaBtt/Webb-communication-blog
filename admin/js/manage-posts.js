@@ -29,7 +29,7 @@ async function fetchBlogs() {
                 </td>
                 
                 <td><span class="date"> ${blogDate.getFullYear()}-${blogDate.getMonth()+1}-${blogDate.getDate()} ${blogDate.toLocaleTimeString()} </span></td>
-                <td class="buttons"><button><a href="update-post.html">Update</a></button> |
+                <td class="buttons"><button><a href="update-post.html?id=${entry._id}">Update</a></button> |
                     <button><a href="#" data-id=${entry._id} class="delete-blog">Delete</a></button> </td>
             </tr>
             `
