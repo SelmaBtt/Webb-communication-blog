@@ -49,7 +49,7 @@ async function fetchBlogs() {
             fetch (`https://blog-api-assignment.up.railway.app/posts/${blog}`, {
                 method: 'DELETE'
             });
-            link.parentNode.parentNode.remove();
+            link.parentNode.parentNode.parentNode.remove();
         })
     }
 
