@@ -5,29 +5,9 @@
     <title>Update Page</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<style>
-    form{
-        display: flex;
-        flex-direction: column;
-        /* width: 50vw; */
-    }
-    form *{
-        align-self: center;
-        width: 40vw;
-    }
-    input{
-        margin: 5px;
-        height: 2em;
-    }
-    #submit-btn{
-        margin-top: 1em;
-    }
-</style>
 <body>
     <!-- <h1>This page is required for the VG grade</h1> -->
-
-    <label for="form">Update</label>
-    <form>
+    <form id="update-form">
         <label for="title">Title:</label>
         <input id="title" type="text">
         <label for="author">Author:</label>
@@ -50,8 +30,8 @@
             <option value="Family">Family</option>
         </select>
         <input id="submit-btn" type="submit" value="Update">
+        <a href="index.html">Back to admin view</a>
     </form>
-    <a href="index.html">Back</a>
 
     <script src="js/update-post.js"></script>
 </body>
