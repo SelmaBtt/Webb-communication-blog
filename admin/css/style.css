@@ -21,19 +21,19 @@ table, thead, tbody, th, td{
     border: 1px solid black;
     border-collapse: collapse;
 }
-#container, #blog-form {
+#container, #blog-form, #update-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-family: var(--extra-font);
 }
-#blog-table {
+#blog-table{
     background-color: var(--white);
     box-sizing: border-box;
     width: 100%;
     table-layout: fixed;
 }
-#blog-form {
+#blog-form, #update-form{
     background-color: var(--white);
     border-radius: 15px;
     margin: 15%;
@@ -72,17 +72,34 @@ td {
     flex-direction: row;
     justify-content: center;
 }
-button{
+button, #submit-btn{
     background-color: var(--blue);
     border-radius: 7px;
     border: none;
 }
-#blog-button {
+#blog-button, #submit-btn {
     min-width: 20%;
     align-self: center;
     margin: 2%;
 }
-button:hover{
+button:hover, #submit-btn:hover{
     transition: .3s ease;
     box-shadow: 2px 2px 2px var(--accent-shade);
+}
+
+/* Update page css */
+
+#title, #author, #date, #tags{
+    width: 100%;
+}
+#submit-btn{
+    width: 20%;
+}
+#update-form a{
+    color: var(--blue);
+    text-decoration: none;
+}
+#update-form a:hover{
+    color: var(--blue);
+    text-decoration: underline;
 }
