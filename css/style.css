@@ -13,7 +13,9 @@ body{
     grid-template-columns: repeat(3, auto);
     background-color: var(--blue);
     padding: 50px 10%;
-    width: 100%;
+    width: 78%;
+    margin: 0 auto;
+    border-radius: 15px;
 }
 h1{
     grid-column: 2/ span 1;
